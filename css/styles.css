@@ -1,0 +1,16 @@
+.ts_info{
+    color: blue;
+}
+.ts_success{
+    color: green;
+}
+.ts_danger{
+    color: red;
+}
+.ts_tracking_report{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #f7f7f7;
+    background-color: #fff;;
+}
