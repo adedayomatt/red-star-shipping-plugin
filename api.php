@@ -1,4 +1,8 @@
 <?php
+/**
+ * This is where the request is sent to the API endpoint using guzzlehttp since I could not send the
+ * request via AJAX. So here is it, The request is sent here, from here sent to http://api.clicknship.com.ng/
+ */
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 require __DIR__.'/vendor/autoload.php';
@@ -13,8 +17,9 @@ if(isset($_POST['endpoint']) && isset($_POST['method'])){
                 'Content-Type' => 'application/x-www-form-urlencoded'
             ],
             'form_params' => [
-                // 'username' => 'perfecttrust',
-                // 'password' => 'Ybg529%$treqA',
+                /**
+                 * This is a demo credential provided by clickNship API.
+                 */
                 'username' => 'cnsdemoapiacct',
                 'password' => 'ClickNShip$12345',
                 'grant_type' => 'password'

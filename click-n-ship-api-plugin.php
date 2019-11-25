@@ -12,6 +12,11 @@ require __DIR__.'/vendor/autoload.php';
 
 // Defining some constants for the shipping
 DEFINE('DEFAULT_SHIPPING_FEE',2000);
+/**
+ * I'll be passing the request through here because the API end point does not use https
+ * and ajax would not sent request from this origin (with https) to source that does not 
+ * have https
+ */
 DEFINE('SELF_API', 'https://api.perfecttrust.com.ng');
 
 // enque the plugin css
@@ -24,7 +29,7 @@ function click_n_ship_hook_js() {
     //this scipt should only run on checkout page
     if (is_page ('8')) { 
       ?>
-          <script type="text/javascript">
+          <script >
 
             jQuery(document).ready(function(){
                 /**
